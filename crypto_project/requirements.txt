@@ -1,0 +1,7 @@
+apache-airflow
+psycopg2-binary
+streamlit
+pandas
+matplotlib
+requests
+sqlalchemy

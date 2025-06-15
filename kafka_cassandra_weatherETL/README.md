@@ -29,8 +29,8 @@ The **Cassandra Python driver** (`cassandra-driver`) does **not support Python 3
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/weather-etl-pipeline.git
-cd weather-etl-pipeline
+git clone https://github.com/Navashub/lux-projects/tree/main/kafka_cassandra_weatherETL
+cd kafka_cassandra_weatherETL
 ```
 
 ---
@@ -204,4 +204,4 @@ This project is a complete weather ETL pipeline that:
 
 ## 📌 Credits
 
-Built with ❤️ by [Navas Herbert](https://github.com/navasherbs)
+Built with ❤️ by [Navas Herbert](https://github.com/Navashub)

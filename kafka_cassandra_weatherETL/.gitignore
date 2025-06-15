@@ -1,0 +1,49 @@
+# Python virtual environments
+venv/
+myvenv*/
+.env
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# VSCode settings (optional)
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Docker artifacts
+*.tar
+docker-compose.override.yml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Output files
+*.csv
+*.sqlite3
+*.db
+*.zip
+
+# Pycharm / JetBrains
+.idea/
+
+# Node (if using any tools like frontend dashboards later)
+node_modules/
+
+# CQL Shell history
+.history

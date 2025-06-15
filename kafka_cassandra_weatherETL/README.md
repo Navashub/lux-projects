@@ -204,4 +204,4 @@ This project is a complete weather ETL pipeline that:
 
 ## 📌 Credits
 
-Built with ❤️ by [Navas Herbert](https://github.com/Navashub)
+by [Navas Herbert](https://github.com/Navashub)

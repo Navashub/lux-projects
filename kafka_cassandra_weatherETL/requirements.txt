@@ -1,0 +1,4 @@
+confluent_kafka
+requests
+python-dotenv
+cassandra-driver

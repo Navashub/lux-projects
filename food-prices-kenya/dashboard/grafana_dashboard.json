@@ -1,0 +1,46 @@
+{
+  "title": "Kenya Food Prices Dashboard",
+  "uid": "kenya-food-prices",
+  "version": 1,
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Average Price Over Time",
+      "datasource": "Postgres",
+      "targets": [
+        {
+          "rawSql": "SELECT date AS \"time\", AVG(usdprice) AS \"Avg USD Price\" FROM food_prices GROUP BY date ORDER BY date",
+          "format": "time_series"
+        }
+      ],
+      "gridPos": { "x": 0, "y": 0, "w": 24, "h": 8 }
+    },
+    {
+      "id": 2,
+      "type": "barchart",
+      "title": "Average Price by Commodity",
+      "datasource": "Postgres",
+      "targets": [
+        {
+          "rawSql": "SELECT commodity, AVG(usdprice) AS \"Avg Price\" FROM food_prices GROUP BY commodity ORDER BY AVG(usdprice) DESC LIMIT 10",
+          "format": "table"
+        }
+      ],
+      "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 }
+    },
+    {
+      "id": 3,
+      "type": "heatmap",
+      "title": "Price Heatmap by Region",
+      "datasource": "Postgres",
+      "targets": [
+        {
+          "rawSql": "SELECT date AS \"time\", admin1 AS \"region\", AVG(usdprice) AS \"price\" FROM food_prices GROUP BY date, admin1",
+          "format": "time_series"
+        }
+      ],
+      "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 }
+    }
+  ]
+} 

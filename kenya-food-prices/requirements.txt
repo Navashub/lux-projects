@@ -1,0 +1,9 @@
+
+pyspark
+pandas
+sqlalchemy
+psycopg2-binary
+requests
+openpyxl
+spark-excel
+python-dateutil

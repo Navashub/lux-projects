@@ -1,0 +1,29 @@
+{
+    "dashboard": {
+      "title": "Kenya Food Prices Dashboard",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "Price Trends Over Time",
+          "datasource": "PostgreSQL",
+          "targets": [
+            {
+              "rawSql": "SELECT date, AVG(price) FROM fact_prices JOIN dim_time ON fact_prices.time_id = dim_time.time_id GROUP BY date",
+              "format": "time_series"
+            }
+          ]
+        },
+        {
+          "type": "heatmap",
+          "title": "Inflation by County",
+          "datasource": "PostgreSQL",
+          "targets": [
+            {
+              "rawSql": "SELECT county_name, date, AVG(price) FROM fact_prices JOIN dim_county ON fact_prices.county_id = dim_county.county_id JOIN dim_time ON fact_prices.time_id = dim_time.time_id GROUP BY county_name, date",
+              "format": "heatmap"
+            }
+          ]
+        }
+      ]
+    }
+  }
